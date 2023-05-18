@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Importação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora de Importação</h1>
+    <form action="/calculate" method="post">
+        <label for="product_value">Valor do Produto:</label>
+        <input type="text" id="product_value" name="product_value">
+
+        <label for="freight_value">Valor do Frete:</label>
+        <select name="freight_value">
+            <option value="15">1lb = $15,00</option>
+            <option value="25">2lb = $25,00</option>
+            <option value="35">3lb = $35,00</option>
+            <option value="45">4lb = $45,00</option>
+            <option value="55">5lb = $55,00</option>
+            <option value="70">6lb = $70,00</option>
+            <option value="80">7lb = $80,00</option>
+            <option value="90">8lb = $90,00</option>
+            <option value="100">9lb = $100,00</option>
+            <option value="110">10lb = $110,00</option>
+            <option value="110">12lb = $110,00</option>
+            <option value="110">20lb = $110,00</option>
+            <option value="110">40lb = $110,00</option>
+        </select>
+
+        <label for="valor_caixa">Valor do Peso da Caixa:</label>
+        <select name="valor_caixa">
+            <option value="0.4">até 1lb = $0,4</option>
+            <option value="0.5">1.001lb e 2.999lb = $0,5</option>
+            <option value="0.6">3.000lb e 3.999lb = $0,6</option>
+            <option value="0.7">4.000lb e 5.999lb = $0,7</option>
+            <option value="0.8">6.000lb e 9.999lb = $0,8</option>
+            <option value="1.05">10.000lb e 11.999lb = $1,05</option>
+            <option value="1.5">12.000lb e 19.999lb = $1,5</option>
+            <option value="1.9">20.000lb e 39.999lb = $1,9</option>
+            <option value="2.8">acima de 40.000lb = $1,9</option>
+        </select>
+
+        <label for="icms_value">ICMS:</label>
+        <input type="text" id="icms_value" name="icms_value">
+
+        <label for="service_value">Valor do Serviço:</label>
+        <input type="text" id="service_value" name="service_value">
+
+        <label for="valor_brasil">Valor no Brasil:</label>
+        <input type="text" id="valor_brasil" name="valor_brasil">
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+
+</html>

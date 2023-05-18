@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .result-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Resultado</h1>
+    <div class="result-container">
+        <p>Valor do produto: ${{ product_value }}</p>
+        <p>Valor do frete: ${{ taxa_frete }}</p>
+        <p>Serviço: ${{ service_value }}</p>
+        <p>Imposto de 60%: ${{ tax }}</p>
+        <p>Total em Dólar: ${{ valor_junto }}</p>
+        <p>ICMS: ${{ icms_value }}</p>
+        <p>Dólar: ${{ dolar }}</p>
+        <p>Total em Reais: R${{ final_value }}</p>
+        <p>Valor no Brasil: R${{ valor_brasil }}</p>
+        <p>A diferença é: R${{ diferenca }}</p>
+    </div>
+</body>
+
+</html>
